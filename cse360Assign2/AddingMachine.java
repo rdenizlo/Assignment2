@@ -5,6 +5,8 @@
  *
  * The purpose of this class is to create a basic calculater that supports adding, subtracting, and clearing.
  * It stores all the arithmetic operations so it may be accessed later on when the user requests it.
+ *
+ * GitHub URL: https://github.com/rdenizlo/Assignment2
  */
 
 
