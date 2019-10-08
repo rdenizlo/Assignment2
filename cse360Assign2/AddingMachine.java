@@ -2,52 +2,59 @@ package cse360assign2;
 
 public class AddingMachine {
 
-	// keeps track of the total sum
-	private int total;
+    // keeps track of the total sum
+    private int total;
 
-	/**
-	 * Used to initialize an AddingMachine object
-	 */
-	public AddingMachine () {
-		total = 0;  // not needed - included for clarity
-	}
+    // keeps track of all arithmetic operations
+    private String transactions;
 
-	/**
-	 *
-	 * @return the total sum
-	 */
-	public int getTotal () {
-		return 0;
-	}
+    /**
+     * Used to initialize an AddingMachine object
+     */
+    public AddingMachine() {
+        total = 0;  // not needed - included for clarity
+        transactions = "0";
+    }
 
-	/**
-	 * adds a value to the current total
-	 * @param value, the integer being added
-	 */
-	public void add (int value) {
+    /**
+     * @return the total sum
+     */
+    public int getTotal() {
+        return total;
+    }
 
-	}
+    /**
+     * adds a value to the current total
+     *
+     * @param value, the integer being added
+     */
+    public void add(int value) {
+        total += value;
+        transactions += " + " + value;
+    }
 
-	/**
-	 * subtracts a value from the current total
-	 * @param value, the integer subtracting from total
-	 */
-	public void subtract (int value) {
+    /**
+     * subtracts a value from the current total
+     *
+     * @param value, the integer subtracting from total
+     */
+    public void subtract(int value) {
+        total -= value;
+        transactions += " - " + value;
+    }
 
-	}
+    /**
+     * @return a String representation of the arithmetic operations
+     */
+    public String toString() {
+        return transactions;
+    }
 
-	/**
-	 *
-	 * @return a String representation of the arithmetic operations
-	 */
-	public String toString () {
-		return "";
-	}
-
-	/**
-	 * Resets the total and resets the String representation of the arithmetic operations
-	 */
-	public void clear() {
-	
-	}
+    /**
+     * Resets the total and resets the String representation of the arithmetic operations
+     */
+    public void clear() {
+        total = 0;
+        transactions = "0";
+    }
 }
